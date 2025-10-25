@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="center">
+        <div class="menu-icon">
+          <div class="line-1 no-animation"></div>
+          <div class="line-2 no-animation"></div>
+          <div class="line-3 no-animation"></div>
+        </div>
+      </div>
+    </div
+  </body>
+  <script>
+    const menuIcon = document.querySelector(".menu-icon");
+    let isOpen = false; 
+
+
+    const startAnimation = ['animate-line-1', 'animate-line-2', 'animate-line-3'];
+    const reverseAnimation = ['reverse-animate-line-1', 'reverse-animate-line-2', 'reverse-animate-line-3'];
+
+
+    menuIcon.addEventListener("click", () => {
+    const lines = menuIcon.querySelectorAll(".line-1, .line-2, .line-3");
+  
+    lines.forEach((line, index) => {
+    line.classList.remove(startAnimation[index]);
+    line.classList.remove(reverseAnimation[index]);
+    line.classList.remove("no-animation");
+
+    if (!isOpen) {
+      line.classList.add(startAnimation[index]);
+    } else {
+      line.classList.add(reverseAnimation[index]);
+    }
+  });
+  
+  isOpen = !isOpen;
+});
+  </script>
+</html>
