@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Challenge - 메인 페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 600px;
+        width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .subtitle {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+
+      .challenge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .challenge-card {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+      }
+
+      .challenge-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .challenge-number {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #ffd700;
+      }
+
+      .challenge-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .challenge-description {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.4;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .challenge-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Challenge</h1>
+      <p class="subtitle">매일 새로운 CSS 도전을 시작하세요!</p>
+
+      <div class="challenge-grid">
+        <a href="day1/index.html" class="challenge-card">
+          <div class="challenge-number">01</div>
+          <div class="challenge-title">100 Days</div>
+          <div class="challenge-description">
+            그라데이션 배경과 CSS로 만든 숫자 디자인
+          </div>
+        </a>
+
+        <a href="day2/index.html" class="challenge-card">
+          <div class="challenge-number">02</div>
+          <div class="challenge-title">Button Hover</div>
+          <div class="challenge-description">
+            호버 효과가 있는 버튼 애니메이션
+          </div>
+        </a>
+
+        <a href="day3/index.html" class="challenge-card">
+          <div class="challenge-number">03</div>
+          <div class="challenge-title">Menu Icon</div>
+          <div class="challenge-description">
+            햄버거 메뉴 아이콘 애니메이션 (못풀고 클론 코딩)
+          </div>
+        </a>
+
+        <a href="day4/index.html" class="challenge-card">
+          <div class="challenge-number">04</div>
+          <div class="challenge-title">Loading Spinner</div>
+          <div class="challenge-description">
+            회전하는 로딩 스피너 애니메이션
+          </div>
+        </a>
+      </div>
+
+      <div class="footer">
+        <p>각 챌린지를 클릭하여 상세 페이지로 이동하세요</p>
+      </div>
+    </div>
+  </body>
+</html>
