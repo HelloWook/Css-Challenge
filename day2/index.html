@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <style>
@@ -34,10 +35,14 @@
         transform: translate(-50%, -50%);
       }
     </style>
+=======
+    <link rel="stylesheet" href="style.css" />
+>>>>>>> 50d4b69573fd5ed01e607c78967a9c286bc3420c
   </head>
   <body>
     <div class="frame">
       <div class="center">
+<<<<<<< HEAD
         <div>
           <div></div>
           <div></div>
@@ -46,4 +51,41 @@
       </div>
     </div>
   </body>
+=======
+        <div class="menu-icon">
+          <div class="line-1 no-animation"></div>
+          <div class="line-2 no-animation"></div>
+          <div class="line-3 no-animation"></div>
+        </div>
+      </div>
+    </div
+  </body>
+  <script>
+    const menuIcon = document.querySelector(".menu-icon");
+    let isOpen = false; 
+
+
+    const startAnimation = ['animate-line-1', 'animate-line-2', 'animate-line-3'];
+    const reverseAnimation = ['reverse-animate-line-1', 'reverse-animate-line-2', 'reverse-animate-line-3'];
+
+
+    menuIcon.addEventListener("click", () => {
+    const lines = menuIcon.querySelectorAll(".line-1, .line-2, .line-3");
+  
+    lines.forEach((line, index) => {
+    line.classList.remove(startAnimation[index]);
+    line.classList.remove(reverseAnimation[index]);
+    line.classList.remove("no-animation");
+
+    if (!isOpen) {
+      line.classList.add(startAnimation[index]);
+    } else {
+      line.classList.add(reverseAnimation[index]);
+    }
+  });
+  
+  isOpen = !isOpen;
+});
+  </script>
+>>>>>>> 50d4b69573fd5ed01e607c78967a9c286bc3420c
 </html>
